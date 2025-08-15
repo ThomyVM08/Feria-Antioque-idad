@@ -3,255 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feria de la Antioqueñidad - Tradición y Cultura Colombiana</title>
+    <title>Feria de la Antioqueñidad - Urrao, Corazón de las Tradiciones Paisas</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --colombian-yellow: #FFCD00;
-            --colombian-blue: #003893;
-            --colombian-red: #CE1126;
-            --nature-green: #228B22;
+        .paisa-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #b45309 75%, #92400e 100%);
         }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.6;
+        .mountain-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(255, 205, 0, 0.9), rgba(0, 56, 147, 0.8));
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        
-        .section-bg-1 {
-            background: linear-gradient(135deg, rgba(206, 17, 38, 0.1), rgba(255, 255, 255, 0.9));
-        }
-        
-        .section-bg-2 {
-            background: linear-gradient(135deg, rgba(34, 139, 34, 0.1), rgba(255, 255, 255, 0.9));
-        }
-        
-        .section-bg-3 {
-            background: linear-gradient(135deg, rgba(0, 56, 147, 0.1), rgba(255, 255, 255, 0.9));
-        }
-        
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        
         .card-hover {
             transition: all 0.3s ease;
         }
-        
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
-        
-        .btn-colombia {
-            background: linear-gradient(45deg, var(--colombian-yellow), var(--colombian-red));
-            transition: all 0.3s ease;
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
         }
-        
-        .btn-colombia:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 20px rgba(206, 17, 38, 0.3);
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-        
-        .image-container img {
-            transition: transform 0.3s ease;
-        }
-        
-        .image-container:hover img {
-            transform: scale(1.05);
-        }
-        
-        .nav-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 50%;
-            background-color: var(--colombian-yellow);
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-            left: 0;
-        }
-        
-        .footer-bg {
-            background: linear-gradient(135deg, var(--colombian-blue), var(--nature-green));
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="font-poppins bg-gray-50">
+    <!-- Header Hero Section -->
+    <header class="relative h-screen paisa-gradient mountain-pattern flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+            <h1 class="font-playfair text-6xl md:text-8xl font-bold mb-6 text-shadow">
+                Feria de la Antioqueñidad
+            </h1>
+            <h2 class="font-playfair text-3xl md:text-5xl font-semibold mb-8 text-shadow">
+                Urrao - Corazón de las Tradiciones Paisas
+            </h2>
+            <p class="text-xl md:text-2xl font-light mb-8 leading-relaxed text-shadow">
+                Celebramos 212 años de historia, cultura y tradición en el paraíso escondido de Antioquia
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <span class="bg-white bg-opacity-20 px-6 py-3 rounded-full backdrop-blur-sm">
+                    <i class="fas fa-calendar-alt mr-2"></i>11 de Agosto
+                </span>
+                <span class="bg-white bg-opacity-20 px-6 py-3 rounded-full backdrop-blur-sm">
+                    <i class="fas fa-map-marker-alt mr-2"></i>Urrao, Antioquia
+                </span>
+                <span class="bg-white bg-opacity-20 px-6 py-3 rounded-full backdrop-blur-sm">
+                    <i class="fas fa-users mr-2"></i>Tradición Paisa
+                </span>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-3xl"></i>
+        </div>
+    </header>
+
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white shadow-lg z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <i class="fas fa-flag text-2xl mr-2" style="color: var(--colombian-red);"></i>
-                    <span class="playfair font-bold text-xl text-gray-800">Feria de la Antioqueñidad</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#inicio" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2">Inicio</a>
-                    <a href="#historia" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2">Historia</a>
-                    <a href="#tradiciones" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2">Tradiciones</a>
-                    <a href="#gastronomia" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2">Gastronomía</a>
+    <nav class="sticky top-0 z-50 bg-white shadow-lg border-b-4 border-yellow-500">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center py-4">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-sm md:text-base">
+                    <a href="#historia" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-landmark mr-2"></i>Historia
+                    </a>
+                    <a href="#cultura" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-theater-masks mr-2"></i>Cultura
+                    </a>
+                    <a href="#gastronomia" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-utensils mr-2"></i>Gastronomía
+                    </a>
+                    <a href="#vestuarios" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-tshirt mr-2"></i>Vestuarios
+                    </a>
+                    <a href="#artesanias" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-hands mr-2"></i>Artesanías
+                    </a>
+                    <a href="#festividades" class="px-4 py-2 text-yellow-800 hover:bg-yellow-100 rounded-lg transition-colors">
+                        <i class="fas fa-music mr-2"></i>Festividades
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative min-h-screen flex items-center pt-16">
-        <div class="absolute inset-0">
-            <img src="https://cdn1.genspark.ai/user-upload-image/4_generated/21cdd7a6-0cbf-412f-b740-2894cafcbb1f" 
-                 alt="Feria de la Antioqueñidad" 
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 hero-bg"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h1 class="playfair text-6xl md:text-8xl font-bold mb-6 fade-in">
-                Feria de la Antioqueñidad
-            </h1>
-            <p class="text-2xl md:text-3xl mb-8 fade-in stagger-1">
-                Celebrando la Tradición y Cultura Paisa
-            </p>
-            <p class="text-lg md:text-xl mb-12 max-w-4xl mx-auto fade-in stagger-2">
-                Una celebración única que honra las raíces, tradiciones y el espíritu antioqueño cada mes de agosto. 
-                Descubre la riqueza cultural, los bailes tradicionales y los sabores auténticos de nuestra región.
-            </p>
-            <a href="#historia" class="btn-colombia text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center fade-in stagger-3">
-                <i class="fas fa-compass mr-2"></i>
-                Explorar Nuestra Cultura
-            </a>
-        </div>
-    </section>
-
-    <!-- Historia Section -->
-    <section id="historia" class="py-20 section-bg-1">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <h2 class="playfair text-5xl font-bold mb-8" style="color: var(--colombian-red);">
-                        <i class="fas fa-landmark mr-4"></i>
-                        Historia y Patrimonio
+    <!-- Urrao Introduction -->
+    <section class="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Urrao, Paraíso Vivo de Antioquia
                     </h2>
-                    <div class="space-y-6 text-gray-700">
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-calendar-alt mr-3" style="color: var(--colombian-blue);"></i>
-                                Orígenes de la Celebración
-                            </h3>
-                            <p>La Feria de la Antioqueñidad se celebra cada año en agosto, especialmente el 11 de agosto, como una manifestación del orgullo paisa y la preservación de nuestras tradiciones ancestrales.</p>
-                        </div>
-                        
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-heart mr-3" style="color: var(--colombian-red);"></i>
-                                Importancia Cultural
-                            </h3>
-                            <p>Esta festividad representa la identidad antioqueña, uniendo comunidades en la celebración de sus costumbres, valores y el legado de generaciones pasadas.</p>
-                        </div>
-                        
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-users mr-3" style="color: var(--nature-green);"></i>
-                                Desfiles Tradicionales
-                            </h3>
-                            <p>Los desfiles del 11 de agosto se realizan en todos los municipios del departamento, mostrando trajes típicos, carrozas y expresiones culturales que mantienen viva nuestra historia.</p>
-                        </div>
-                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        En el corazón del suroeste antioqueño, Urrao se alza como un testimonio viviente de la identidad paisa. 
+                        Aquí convivimos campesinos, artesanos, emprendedores, deportistas y líderes que mantienen vivas 
+                        las tradiciones que nos definen como pueblo.
+                    </p>
                 </div>
                 
-                <div class="fade-in stagger-1">
-                    <div class="image-container">
-                        <img src="https://cdn1.genspark.ai/user-upload-image/4_generated/bc8de967-e849-48d4-8467-7e78c75ed00e" 
-                             alt="Arquitectura Colonial Antioqueña" 
-                             class="w-full h-96 object-cover shadow-2xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <img src="https://turismoantioquia.travel/wp-content/uploads/2021/09/BANNERS-MUNICIPIOS-URRAO.jpg" 
+                             alt="Paisaje de Urrao" 
+                             class="rounded-2xl shadow-2xl w-full h-96 object-cover">
                     </div>
-                    <p class="text-center text-gray-600 mt-4 italic">Arquitectura colonial que refleja nuestro patrimonio histórico</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tradiciones Section -->
-    <section id="tradiciones" class="py-20 section-bg-2">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in order-2 lg:order-1">
-                    <div class="image-container">
-                        <img src="https://cdn1.genspark.ai/user-upload-image/4_generated/faad3648-d608-40f4-800e-d63560ff40be" 
-                             alt="Bailes Folklóricos Antioqueños" 
-                             class="w-full h-96 object-cover shadow-2xl">
-                    </div>
-                    <p class="text-center text-gray-600 mt-4 italic">Bailarines en trajes tradicionales llenos de color y alegría</p>
-                </div>
-                
-                <div class="fade-in order-1 lg:order-2">
-                    <h2 class="playfair text-5xl font-bold mb-8" style="color: var(--nature-green);">
-                        <i class="fas fa-music mr-4"></i>
-                        Bailes y Tradiciones
-                    </h2>
-                    <div class="space-y-6 text-gray-700">
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-drum mr-3" style="color: var(--colombian-yellow);"></i>
-                                Bambuco y Cumbia
-                            </h3>
-                            <p>Los ritmos tradicionales del bambuco y la cumbia resuenan en cada celebración, conectando a las generaciones con sus raíces musicales más profundas.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-yellow-500 p-3 rounded-full">
+                                <i class="fas fa-mountain text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Geografía Privilegiada</h3>
+                                <p class="text-gray-600">Ubicado en las montañas del suroeste antioqueño, Urrao ofrece paisajes únicos con páramos, ríos cristalinos y una biodiversidad excepcional.</p>
+                            </div>
                         </div>
                         
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-palette mr-3" style="color: var(--colombian-red);"></i>
-                                Trajes Típicos
-                            </h3>
-                            <p>Los vestidos adornados con flores, colores vibrantes y detalles artesanales representan la belleza y elegancia de la tradición antioqueña.</p>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-green-500 p-3 rounded-full">
+                                <i class="fas fa-seedling text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Tradición Agrícola</h3>
+                                <p class="text-gray-600">Reconocido por sus productos únicos como la gulupa, el aguacate y el famoso queso dulce urraeño, emblema gastronómico de la región.</p>
+                            </div>
                         </div>
                         
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-dance mr-3" style="color: var(--colombian-blue);"></i>
-                                Danzas Folklóricas
-                            </h3>
-                            <p>Cada movimiento cuenta una historia, cada paso preserva una tradición. Las danzas antioqueñas son expresiones vivas de nuestra cultura.</p>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-blue-500 p-3 rounded-full">
+                                <i class="fas fa-heart text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Calidez Humana</h3>
+                                <p class="text-gray-600">Los urraeños conservan la hospitalidad paisa ancestral, recibiendo a visitantes con el calor humano característico de la cultura antioqueña.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,132 +148,698 @@
         </div>
     </section>
 
-    <!-- Gastronomía Section -->
-    <section id="gastronomia" class="py-20 section-bg-3">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <h2 class="playfair text-5xl font-bold mb-8" style="color: var(--colombian-blue);">
-                        <i class="fas fa-utensils mr-4"></i>
-                        Sabores de Antioquia
+    <!-- Historia y Cacique Toné -->
+    <section id="historia" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Historia y Legado del Cacique Toné
                     </h2>
-                    <div class="space-y-6 text-gray-700">
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-plate-wheat mr-3" style="color: var(--colombian-yellow);"></i>
-                                Bandeja Paisa
-                            </h3>
-                            <p>El plato más emblemático de la región, una generosa combinación de ingredientes que refleja la abundancia y hospitalidad antioqueña.</p>
-                        </div>
-                        
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-bread-slice mr-3" style="color: var(--colombian-red);"></i>
-                                Arepas Antioqueñas
-                            </h3>
-                            <p>Símbolo culinario de la región, las arepas acompañan cada comida y representan la tradición gastronómica familiar.</p>
-                        </div>
-                        
-                        <div class="card-hover bg-white p-6 rounded-lg shadow-lg">
-                            <h3 class="text-2xl font-semibold mb-3 flex items-center">
-                                <i class="fas fa-coffee mr-3" style="color: var(--nature-green);"></i>
-                                Café de Montaña
-                            </h3>
-                            <p>El café antioqueño, cultivado en las montañas de la región, es reconocido mundialmente por su calidad y sabor excepcional.</p>
-                        </div>
-                    </div>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        La historia de Urrao está profundamente marcada por el legado del Cacique Toné, 
+                        líder indígena de la tribu Catía que defendió con valor estas tierras durante la conquista española.
+                    </p>
                 </div>
-                
-                <div class="fade-in stagger-1">
-                    <div class="image-container">
-                        <img src="https://cdn1.genspark.ai/user-upload-image/4_generated/b3c4da9a-9161-4f4f-8d35-f1fb8054d54d" 
-                             alt="Gastronomía Antioqueña" 
-                             class="w-full h-96 object-cover shadow-2xl">
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-amber-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-crown text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">El Cacique Toné</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Jefe de la tribu indígena de los Catíos, Toné fue símbolo de coraje, ímpetu y determinación. 
+                                Su resistencia ante los conquistadores españoles representa la lucha por la autonomía y libertad de los pueblos originarios.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-red-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-shield-alt text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Resistencia Heroica</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Urrao fue escenario de fuertes luchas entre los pobladores originarios y los españoles. 
+                                El legado de Toné perdura como ejemplo de resistencia y defensa de la identidad cultural.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-calendar-star text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Fiestas del Cacique Toné</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Desde 1954, Urrao celebra las Tradicionales Fiestas del Cacique Toné, 
+                                un evento que honra la historia indígena y la cultura del suroeste antioqueño con una mezcla única de tradiciones.
+                            </p>
+                        </div>
                     </div>
-                    <p class="text-center text-gray-600 mt-4 italic">Una mesa llena de sabores tradicionales y auténticos</p>
+
+                    <div class="space-y-6">
+                        <img src="https://turismoantioquia.travel/wp-content/uploads/2021/12/IGLESIA-URRAO.png" 
+                             alt="Iglesia de Urrao" 
+                             class="rounded-2xl shadow-2xl w-full h-80 object-cover">
+                        
+                        <div class="bg-amber-100 p-6 rounded-2xl border-l-4 border-amber-500">
+                            <h4 class="font-semibold text-lg text-amber-800 mb-2">
+                                <i class="fas fa-quote-left mr-2"></i>Legado Inmortal
+                            </h4>
+                            <p class="text-amber-700 italic">
+                                "Las palabras inmortalizadas del Cacique Toné en Urrao representan la esencia de un pueblo 
+                                que nunca doblegó su espíritu ante la adversidad, manteniendo viva su cultura ancestral."
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="py-20 bg-gradient-to-r from-yellow-400 via-red-500 to-blue-600">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="playfair text-4xl md:text-5xl font-bold text-white mb-6 fade-in">
-                ¡Vive la Antioqueñidad!
-            </h2>
-            <p class="text-xl text-white mb-8 fade-in stagger-1">
-                Únete a nosotros en la celebración de nuestras tradiciones, cultura y el orgullo de ser paisas.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in stagger-2">
-                <button class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-calendar-check mr-2"></i>
-                    Próximos Eventos
-                </button>
-                <button class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center">
-                    <i class="fas fa-info-circle mr-2"></i>
-                    Más Información
-                </button>
+    <!-- Cultura y Tradiciones -->
+    <section id="cultura" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Cultura y Tradiciones Paisas
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        El Día de la Antioqueñidad en Urrao es una celebración vibrante donde las calles se llenan de color, 
+                        tradición y sonrisas, manteniendo vivo el orgullo paisa a través de generaciones.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-music text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Música Tradicional</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            La parranda paisa, única expresión musical de Antioquia, llena las calles con acordeón, 
+                            guitarra y canto, siendo el alma de nuestras celebraciones.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-theater-masks text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Danzas Folclóricas</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Los desfiles tradicionales muestran la riqueza de nuestras danzas, 
+                            donde cada paso cuenta la historia de nuestros antepasados campesinos y arrieros.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-hands-helping text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Solidaridad Paisa</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            La colaboración comunitaria y el espíritu emprendedor caracterizan a los urraeños, 
+                            manteniendo vivos los valores ancestrales paisas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-amber-100 to-yellow-100 p-8 rounded-2xl border-2 border-amber-200">
+                    <div class="text-center">
+                        <h3 class="font-playfair text-3xl font-bold text-amber-800 mb-4">
+                            <i class="fas fa-star mr-3"></i>Celebración del Día de la Antioqueñidad
+                        </h3>
+                        <p class="text-lg text-amber-700 leading-relaxed max-w-4xl mx-auto">
+                            Cada 11 de agosto, Urrao se viste de gala para celebrar 212 años de historia antioqueña. 
+                            Las calles principales se transforman en un escenario donde confluyen actos protocolarios, 
+                            desfiles de trajes típicos, presentaciones musicales y una explosión de color que representa 
+                            el orgullo de ser parte de esta Antioquia grande y diversa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gastronomía -->
+    <section id="gastronomia" class="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Gastronomía Tradicional Urraeña
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        Los sabores de Urrao cuentan historias de tradición familiar, ingredientes únicos de la región 
+                        y recetas transmitidas de generación en generación que definen nuestra identidad gastronómica.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <img src="https://i.ytimg.com/vi/AITKbsoME7Y/maxresdefault.jpg" 
+                             alt="Queso dulce tradicional de Urrao" 
+                             class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-yellow-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-cheese text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Queso Dulce Urraeño</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                El emblema gastronómico de Urrao. Este delicioso dulce artesanal, elaborado con leche fresca 
+                                y técnicas tradicionales, representa la esencia de nuestra cultura culinaria.
+                            </p>
+                            <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Producto Estrella
+                            </span>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-fire text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Quemado Tradicional</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Dulce artesanal que acompaña perfectamente el café especial urraeño, 
+                                creando una experiencia gastronómica única que endulza el día de locales y visitantes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-leaf text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Gulupa</h4>
+                        <p class="text-gray-600 text-sm">Fruta exótica característica de la región, perfecta para jugos refrescantes</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-yellow-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-seedling text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Aguacate</h4>
+                        <p class="text-gray-600 text-sm">Aguacates cremosos utilizados tanto en preparaciones dulces como saladas</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-red-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-drumstick-bite text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Sancocho</h4>
+                        <p class="text-gray-600 text-sm">Sancocho de gallina criolla, plato tradicional que reúne a las familias</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-brown-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #8B4513;">
+                            <i class="fas fa-coffee text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Café Especial</h4>
+                        <p class="text-gray-600 text-sm">Granos de café de altura con sabor único y aroma inconfundible</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-orange-100 to-red-100 p-8 rounded-2xl border-2 border-orange-200">
+                    <h3 class="font-playfair text-3xl font-bold text-orange-800 mb-6 text-center">
+                        <i class="fas fa-utensils mr-3"></i>Otros Sabores Tradicionales
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold text-orange-700 mb-3">Platos Principales</h4>
+                            <ul class="space-y-2 text-orange-600">
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Arepa de maíz pelado</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Tamal antioqueño</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Fríjoles petacos</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Mazamorra con queso dulce</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-orange-700 mb-3">Bebidas y Dulces</h4>
+                            <ul class="space-y-2 text-orange-600">
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Chicha de maíz</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Jugo de aguacate</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Manzanitas dulces</li>
+                                <li><i class="fas fa-circle text-xs mr-2"></i>Cocadas tradicionales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vestuarios Típicos -->
+    <section id="vestuarios" class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Vestuarios Típicos Antioqueños
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        Los trajes tradicionales paisas son una expresión viva de nuestra identidad cultural, 
+                        reflejando la elegancia campesina y el orgullo de nuestras raíces antioqueñas.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <!-- Chapolera -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <img src="https://static.s123-cdn-static-c.com/uploads/2255939/2000_5cf81e2200c1c.png" 
+                             alt="Traje típico Chapolera" 
+                             class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-pink-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-female text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-semibold text-gray-800">La Chapolera</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                El traje femenino tradicional antioqueño representa la elegancia y gracia de la mujer paisa. 
+                                Es símbolo de feminidad, tradición y orgullo cultural.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-tshirt text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Blusa</h4>
+                                        <p class="text-gray-600 text-sm">Blusa blanca con cuello bandeja, arandelas y encajes delicados</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-circle text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Falda</h4>
+                                        <p class="text-gray-600 text-sm">Falda larga con flores, arandelas y encajes, con enaguas para volumen</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-hand-paper text-pink-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Accesorios</h4>
+                                        <p class="text-gray-600 text-sm">Delantal, pañoleta, alpargatas y peinado con flores naturales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arriero -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                        <img src="https://static.s123-cdn-static-c.com/uploads/2255939/2000_5cf81d8ac8b77.png" 
+                             alt="Traje típico Arriero" 
+                             class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-male text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-semibold text-gray-800">El Arriero</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                El traje masculino tradicional rinde homenaje a los arrieros que recorrían las montañas antioqueñas. 
+                                Representa la fuerza, el trabajo y la determinación paisa.
+                            </p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-tshirt text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Camisa</h4>
+                                        <p class="text-gray-600 text-sm">Camisa blanca de algodón, manga larga y corte tradicional</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-circle text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Pantalón</h4>
+                                        <p class="text-gray-600 text-sm">Pantalón de tono oscuro, generalmente negro o azul marino</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <i class="fas fa-briefcase text-blue-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800">Accesorios</h4>
+                                        <p class="text-gray-600 text-sm">Carriel, ruana, machete, peinilla, sombrero y alpargatas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-indigo-100 to-purple-100 p-8 rounded-2xl border-2 border-indigo-200">
+                    <h3 class="font-playfair text-3xl font-bold text-indigo-800 mb-6 text-center">
+                        <i class="fas fa-star mr-3"></i>Símbolos de Identidad Paisa
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="bg-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-briefcase text-white text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-indigo-800 mb-2">El Carriel</h4>
+                            <p class="text-indigo-600 text-sm">Símbolo básico del paisa, bolso de cuero que acompaña al hombre en sus labores</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-hat-cowboy text-white text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-indigo-800 mb-2">La Ruana</h4>
+                            <p class="text-indigo-600 text-sm">Prenda tradicional que protege del frío de las montañas antioqueñas</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="bg-indigo-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shoe-prints text-white text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-indigo-800 mb-2">Las Alpargatas</h4>
+                            <p class="text-indigo-600 text-sm">Calzado tradicional tejido que se adapta perfectamente al terreno montañoso</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artesanías -->
+    <section id="artesanias" class="py-20 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Artesanías y Productos Típicos
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        Las manos talentosas de los artesanos urraeños crean productos únicos que reflejan 
+                        la creatividad, tradición y calidad que caracterizan a nuestra región.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <img src="https://turismoantioquia.travel/wp-content/uploads/2022/11/MARINILLA-1.jpg" 
+                             alt="Artesanías antioqueñas" 
+                             class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-teal-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-cookie-bite text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Dulces Artesanales</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Productos Duqueso y otros emprendimientos locales mantienen viva la tradición dulcera 
+                                con manzanitas, cocadas y rollitos de bocadillo cubiertos de leche.
+                            </p>
+                            <span class="inline-block bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Tradición Familiar
+                            </span>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-500 p-3 rounded-full mr-4">
+                                    <i class="fas fa-seedling text-white text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Productos Agrícolas</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Urrao es reconocido como región exportadora de tomate, granadilla, queso dulce 
+                                y granos de café que sirven como regalos únicos de nuestra tierra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-palette text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Cerámica</h4>
+                        <p class="text-gray-600 text-sm">Piezas únicas que cuentan la historia regional antioqueña</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-yellow-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-gem text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Filigrana</h4>
+                        <p class="text-gray-600 text-sm">Delicada orfebrería en oro que representa la tradición minera</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cut text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Tejeduría</h4>
+                        <p class="text-gray-600 text-sm">Textiles tradicionales elaborados con técnicas ancestrales</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover text-center">
+                        <div class="bg-brown-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #8B4513;">
+                            <i class="fas fa-tree text-white text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Madera</h4>
+                        <p class="text-gray-600 text-sm">Bandejas, cajas y muebles decorados con técnicas tradicionales</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-teal-100 to-cyan-100 p-8 rounded-2xl border-2 border-teal-200">
+                    <h3 class="font-playfair text-3xl font-bold text-teal-800 mb-6 text-center">
+                        <i class="fas fa-hands mr-3"></i>Feria Artesanal de Urrao
+                    </h3>
+                    <p class="text-lg text-teal-700 text-center leading-relaxed max-w-4xl mx-auto mb-6">
+                        Durante 10 días, Urrao se convierte en un escenario de arte y tradición donde colores, 
+                        sabores, texturas y creaciones únicas llenan cada rincón. Esta feria artesanal es una 
+                        oportunidad única para emprendedores y artistas de mostrar su talento.
+                    </p>
+                    <div class="text-center">
+                        <span class="inline-block bg-teal-200 text-teal-800 px-6 py-3 rounded-full text-lg font-semibold">
+                            <i class="fas fa-calendar-check mr-2"></i>Evento Anual Destacado
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Festividades -->
+    <section id="festividades" class="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="font-playfair text-5xl font-bold text-gray-800 mb-6">
+                        Festividades y Celebraciones
+                    </h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                        El calendario festivo de Urrao está lleno de celebraciones que mantienen viva la tradición 
+                        y fortalecen los lazos comunitarios, convirtiendo a nuestro municipio en un destino cultural único.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 mb-16">
+                    <div class="space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-red-500 p-4 rounded-full mr-4">
+                                    <i class="fas fa-crown text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-gray-800">Fiestas del Cacique Toné</h3>
+                                    <p class="text-gray-500">Junio - Julio</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                La celebración más importante de Urrao, que desde 1954 honra el legado indígena 
+                                con desfiles, música, danzas y una amplia programación cultural que atrae 
+                                visitantes de toda Antioquia.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Desfiles</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Música</span>
+                                <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Danzas</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-yellow-500 p-4 rounded-full mr-4">
+                                    <i class="fas fa-flag text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-gray-800">Día de la Antioqueñidad</h3>
+                                    <p class="text-gray-500">11 de Agosto</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Celebración del orgullo paisa con actos protocolarios, desfiles de trajes típicos 
+                                y una explosión de color en las calles principales que reafirma nuestra identidad cultural.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Actos Oficiales</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Desfiles</span>
+                                <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Tradición</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-green-500 p-4 rounded-full mr-4">
+                                    <i class="fas fa-seedling text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-gray-800">Día del Campesino</h3>
+                                    <p class="text-gray-500">Celebración Anual</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Homenaje a los trabajadores del campo que mantienen viva la tradición agrícola 
+                                de Urrao, con actividades que destacan la importancia del sector rural.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Agricultura</span>
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Campo</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-purple-500 p-4 rounded-full mr-4">
+                                    <i class="fas fa-theater-masks text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-semibold text-gray-800">Festival Municipal de Teatro</h3>
+                                    <p class="text-gray-500">Octubre - Noviembre</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed mb-4">
+                                Evento cultural que promueve las artes escénicas, reuniendo compañías teatrales 
+                                y artistas que enriquecen la oferta cultural del municipio.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Teatro</span>
+                                <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Arte</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gradient-to-br from-blue-100 to-indigo-100 p-8 rounded-2xl border-2 border-blue-200">
+                        <h3 class="font-playfair text-2xl font-bold text-blue-800 mb-4">
+                            <i class="fas fa-music mr-3"></i>Festival de Danzas
+                        </h3>
+                        <p class="text-blue-700 leading-relaxed">
+                            Celebración del folclor paisa donde grupos de danza de la región muestran 
+                            la riqueza de nuestras tradiciones coreográficas ancestrales.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-100 to-red-100 p-8 rounded-2xl border-2 border-orange-200">
+                        <h3 class="font-playfair text-2xl font-bold text-orange-800 mb-4">
+                            <i class="fas fa-guitar mr-3"></i>Festival de Música
+                        </h3>
+                        <p class="text-orange-700 leading-relaxed">
+                            Encuentro musical que destaca la parranda paisa y otros géneros tradicionales, 
+                            manteniendo viva la expresión musical característica de Antioquia.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-pink-100 to-red-100 p-8 rounded-2xl border-2 border-pink-200">
+                    <h3 class="font-playfair text-3xl font-bold text-pink-800 mb-6 text-center">
+                        <i class="fas fa-heart mr-3"></i>Urrao: Las Festividades Más Alegres de Antioquia
+                    </h3>
+                    <p class="text-lg text-pink-700 text-center leading-relaxed max-w-4xl mx-auto">
+                        Con una amplia programación cultural, desfiles tradicionales y artistas invitados, 
+                        las festividades de Urrao se han consolidado como las más alegres y auténticas de Antioquia. 
+                        Cada celebración es una oportunidad para fortalecer nuestra identidad y compartir 
+                        con propios y visitantes la calidez del pueblo urraeño.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-bg text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="fade-in">
-                    <h3 class="playfair text-2xl font-bold mb-4">Feria de la Antioqueñidad</h3>
-                    <p class="text-gray-300 mb-4">
-                        Preservando y celebrando la rica cultura antioqueña para las futuras generaciones.
+    <footer class="paisa-gradient mountain-pattern py-16 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-playfair text-4xl font-bold mb-4 text-shadow">
+                        Urrao Te Espera
+                    </h2>
+                    <p class="text-xl leading-relaxed max-w-3xl mx-auto text-shadow">
+                        Ven y vive la auténtica experiencia paisa en el corazón de las tradiciones antioqueñas. 
+                        Urrao, donde cada rincón cuenta una historia y cada sonrisa te hace sentir en casa.
                     </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-2xl hover:text-yellow-400 transition-colors duration-300">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-2xl hover:text-yellow-400 transition-colors duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-2xl hover:text-yellow-400 transition-colors duration-300">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Ubicación</h3>
+                        <p>Suroeste de Antioquia<br>Municipio de Urrao</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-alt text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Festividades</h3>
+                        <p>Todo el año<br>Eventos culturales continuos</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="bg-white bg-opacity-20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Hospitalidad</h3>
+                        <p>Calidez paisa<br>Tradición familiar</p>
                     </div>
                 </div>
-                
-                <div class="fade-in stagger-1">
-                    <h4 class="text-xl font-semibold mb-4">Enlaces Rápidos</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#historia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Historia</a></li>
-                        <li><a href="#tradiciones" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Tradiciones</a></li>
-                        <li><a href="#gastronomia" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Gastronomía</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors duration-300">Eventos</a></li>
-                    </ul>
+
+                <div class="border-t border-white border-opacity-30 pt-8 text-center">
+                    <p class="text-lg font-light">
+                        <i class="fas fa-star mr-2"></i>
+                        Feria de la Antioqueñidad - Urrao 2024
+                        <i class="fas fa-star ml-2"></i>
+                    </p>
+                    <p class="mt-2 text-sm opacity-75">
+                        Celebrando 212 años de historia, cultura y tradición paisa
+                    </p>
                 </div>
-                
-                <div class="fade-in stagger-2">
-                    <h4 class="text-xl font-semibold mb-4">Contacto</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            Medellín, Antioquia, Colombia
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            +57 (4) 123-4567
-                        </p>
-                        <p class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            info@feriaantioquenidad.co
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                <p class="text-gray-300">
-                    © 2024 Feria de la Antioqueñidad. Todos los derechos reservados. 
-                    <span class="text-yellow-400">¡Viva Antioquia!</span>
-                </p>
             </div>
         </div>
     </footer>
@@ -404,7 +859,17 @@
             });
         });
 
-        // Intersection Observer for animations
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+
+        // Animate elements on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -413,36 +878,17 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = 'running';
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.animationPlayState = 'paused';
-            observer.observe(el);
-        });
-
-        // Active navigation link highlighting
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.offsetHeight;
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-blue-600');
-                if (link.getAttribute('href').substring(1) === current) {
-                    link.classList.add('text-blue-600');
-                }
-            });
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
         });
     </script>
 </body>
